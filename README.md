@@ -914,20 +914,28 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
   </div>
 
   <div class="about-grid">
-    <div class="about-text">
-    
-     <p>
-  I'm <strong>Michelle</strong>, a Google Workspace Automation & Integration Specialist based in the Philippines. I help businesses eliminate manual work by building automated systems that improve efficiency, accuracy, and reporting.
-</p>
-
-<p>
-  I design and develop end-to-end automation using <strong>Google Apps Script</strong>, <strong>APIs</strong>, and workflow tools to connect systems, automate processes, and reduce repetitive tasks. This includes automated email systems, document generation, CRM workflows, and data synchronization.
-</p>
-
-<p>
-  I also specialize in <strong>Looker Studio dashboards</strong> and reporting systems that turn raw data into clear, actionable insights for decision-making. Before building reports, I ensure data is properly cleaned, structured, and reliable.
-</p>
-    </div>
+   <div class="about-text">
+    <p>
+      I'm <strong>Michelle</strong>, a Google Apps Script Automation & Reporting Specialist helping businesses replace manual processes with scalable, automated systems.
+    </p>
+    <p>
+      I build automation workflows using <strong>Google Apps Script, APIs, and webhooks</strong> to streamline operations such as reporting, CRM processes, document generation, and data pipelines.
+    </p>
+    <p>
+      I also create <strong>Looker Studio dashboards</strong> that transform complex data into clear business insights, ensuring teams can make faster and more informed decisions.
+    </p>
+    <p><strong>What I can build for you:</strong></p>
+    <ul style="color: var(--muted); line-height: 1.8; padding-left: 1.25rem; margin-bottom: 1rem;">
+      <li>Google Apps Script automation</li>
+      <li>Google Sheets &amp; Forms workflows</li>
+      <li>Gmail, Docs, and Drive automation</li>
+      <li>API integrations and webhooks</li>
+      <li>Data cleaning and organization</li>
+      <li>Automated reporting dashboards</li>
+      <li>Looker Studio dashboards</li>
+      <li>AI-assisted workflows using ChatGPT API</li>
+    </ul>
+</div>
     <div class="about-meta">
       <div class="meta-item">
         <span class="meta-icon">📍</span>
