@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michelle · Google Apps Script Automation | Dashboards & Reporting Specialist</title>
+<title>Michelle · Automation & Integration Specialist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -532,7 +532,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
 <!-- HERO -->
 <div class="hero">
   <div class="hero-eyebrow">Available for freelance · Remote · Philippines</div>
- <h1>
+  <h1>
     Google Apps Script <em>Automation</em><br>
     &amp; <span>Reporting & Dashboard</span><br>
     Specialist
@@ -547,7 +547,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
   </div>
   <div class="hero-stats">
     <div>
-      <div class="stat-num">9<span>+</span></div>
+      <div class="stat-num">10<span>+</span></div>
       <div class="stat-label">// automation projects</div>
     </div>
     <div>
@@ -839,6 +839,41 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
       </div>
     </div>
 
+    <!-- 11. Lead Management System -->
+    <div class="project-card c-green wide">
+      <div class="card-top">
+        <div class="card-icon">🎯</div>
+        <span class="card-role">sole builder</span>
+      </div>
+      <div class="card-title">Lead Management & Follow-Up Automation System</div>
+      <div class="flow">
+        <span class="flow-node">Airtable Form</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Airtable Leads DB</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Zapier</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Google Sheets</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Gmail Notification</span>
+        <span class="flow-arrow">→</span>
+        <span class="flow-node">Follow-Up Reminder</span>
+      </div>
+      <div class="card-desc">
+        End-to-end lead management system built from scratch. Designed an Airtable database with a custom lead capture form (Name, Phone, Email, Service Requested) and a 5-stage pipeline: New → Contacted → Estimate Sent → Won → Lost. Automated lead syncing to Google Sheets via Zapier for backup logging, plus Gmail instant notifications on every new submission. Built a follow-up reminder Zap with conditional logic — filters leads by Status=New and Follow Up Count ≤ 2, calculates day of week to skip weekends, and auto-updates Follow Up Count and Last Follow-up Date in Airtable after each reminder is sent.
+      </div>
+      <div class="tags">
+        <span class="tag accent">Airtable</span>
+        <span class="tag accent">Zapier</span>
+        <span class="tag">Google Sheets</span>
+        <span class="tag">Gmail</span>
+        <span class="tag">Lead Tracking</span>
+        <span class="tag">Pipeline Automation</span>
+        <span class="tag">Follow-Up Logic</span>
+        <span class="tag">Conditional Paths</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -914,7 +949,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
   </div>
 
   <div class="about-grid">
-   <div class="about-text">
+    <div class="about-text">
     <p>
       I'm <strong>Michelle</strong>, a Google Apps Script Automation & Reporting Specialist helping businesses replace manual processes with scalable, automated systems.
     </p>
@@ -936,7 +971,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
       <li>AI-assisted workflows using ChatGPT API</li>
     </ul>
 </div>
-    <div class="about-meta">
+        <div class="about-meta">
       <div class="meta-item">
         <span class="meta-icon">📍</span>
         <div>
@@ -981,7 +1016,8 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
     <h2>Let's build something automated.</h2>
     <p>Available for freelance projects, VA roles, and automation consulting. Based in the Philippines — remote-ready worldwide.</p>
     <div class="contact-links">
-      <a href="mailto:sanchezmitch77@email.com" class="btn btn-accent">email me →</a>
+      <a href="mailto:sanchezmitch77@gmail.com" class="btn btn-accent">email me →</a>
+      <a href="https://mitchsanchez29.github.io/automation-portfolio/" class="btn btn-ghost" target="_blank">Portfolio ↗</a>
       <a href="https://github.com/mitchsanchez29" class="btn btn-ghost" target="_blank">GitHub ↗</a>
       <a href="https://v2.onlinejobs.ph/jobseekers/info/1257742" class="btn btn-ghost" target="_blank">OnlineJobs.ph ↗</a>
     </div>
