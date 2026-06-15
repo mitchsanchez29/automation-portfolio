@@ -538,7 +538,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
     · Looker Studio
 </h1>
 <p class="hero-summary">
-    I build automation systems using Google Apps Script, Zapier, APIs, and Google Workspace tools, specializing in reporting, dashboards (Looker Studio), CRM workflows, and data automation.
+    I build automation systems using <strong>Google Apps Script, Zapier, APIs, and Google Workspace tools</strong>, specializing in reporting, dashboards (Looker Studio), CRM workflows, and data automation.
 </p>
   <div class="hero-actions">
     <a href="#projects" class="btn btn-accent">view projects ↓</a>
