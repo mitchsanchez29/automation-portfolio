@@ -533,12 +533,12 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
 <div class="hero">
   <div class="hero-eyebrow">Available for freelance · Remote · Philippines</div>
   <h1>
-    Google Apps Script <em>Automation</em><br>
-    &amp; <span>Reporting & Dashboard</span><br>
-    Specialist
+    Workflow Automation <em>Specialist</em><br>
+    <span>Google Workspace · Zapier</span><br>
+    · Looker Studio
 </h1>
 <p class="hero-summary">
-    I build automation systems using Google Apps Script, APIs, and Google Workspace tools, specializing in reporting, dashboards (Looker Studio), CRM workflows, and data automation.
+    I build automation systems using Google Apps Script, Zapier, APIs, and Google Workspace tools, specializing in reporting, dashboards (Looker Studio), CRM workflows, and data automation.
 </p>
   <div class="hero-actions">
     <a href="#projects" class="btn btn-accent">view projects ↓</a>
@@ -951,10 +951,10 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
   <div class="about-grid">
     <div class="about-text">
     <p>
-      I'm <strong>Michelle</strong>, a Google Apps Script Automation & Reporting Specialist helping businesses replace manual processes with scalable, automated systems.
+      I'm <strong>Michelle</strong>, a Workflow Automation Specialist helping businesses replace manual processes with scalable, automated systems using Google Workspace, Zapier, and APIs.
     </p>
     <p>
-      I build automation workflows using <strong>Google Apps Script, APIs, and webhooks</strong> to streamline operations such as reporting, CRM processes, document generation, and data pipelines.
+      I build automation workflows using <strong>Google Apps Script, Zapier, APIs, and webhooks</strong> to streamline operations such as reporting, CRM processes, document generation, and data pipelines.
     </p>
     <p>
       I also create <strong>Looker Studio dashboards</strong> that transform complex data into clear business insights, ensuring teams can make faster and more informed decisions.
@@ -962,9 +962,11 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
     <p><strong>What I can build for you:</strong></p>
     <ul style="color: var(--muted); line-height: 1.8; padding-left: 1.25rem; margin-bottom: 1rem;">
       <li>Google Apps Script automation</li>
+      <li>Zapier multi-step workflows & integrations</li>
       <li>Google Sheets &amp; Forms workflows</li>
       <li>Gmail, Docs, and Drive automation</li>
       <li>API integrations and webhooks</li>
+      <li>Airtable databases & lead management systems</li>
       <li>Data cleaning and organization</li>
       <li>Automated reporting dashboards</li>
       <li>Looker Studio dashboards</li>
