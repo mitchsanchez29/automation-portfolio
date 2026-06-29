@@ -966,6 +966,7 @@ footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
     </div>
   </div>
 </section>
+
 <!-- OPERATIONS BACKGROUND -->
 <section id="ops-background">
   <div class="section-header">
