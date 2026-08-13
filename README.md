@@ -297,12 +297,15 @@ section{
 
 .output{
   margin-top:auto;
+  min-height:48px;
   padding-top:17px;
-
   border-top:1px solid var(--border);
 
+  display:flex;
+  align-items:flex-start;
+
   color:var(--accent);
-  font:400 10px var(--mono);
+  font:600 10px var(--mono);
   text-transform:uppercase;
   letter-spacing:.04em;
   line-height:1.5;
