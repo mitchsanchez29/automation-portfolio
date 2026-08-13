@@ -348,10 +348,7 @@ footer{
       <h2 class="section-title">Work that fits day to day business needs.</h2>
 
       
-      <div class="services">
-
-        <div class="services">
-
+    <div class="services">
   <article class="service">
     <h3>Administrative Support</h3>
 
