@@ -323,13 +323,13 @@ footer{
       <div class="hero-content">
         <div class="eyebrow">Automation &amp; Reporting Specialist &middot; AI Administrative VA</div>
 
-        <h1>
-          Spreadsheets Organized.<br>
-          Workflows Automated.<br>
-          <span>Admin Handled.</span>
-        </h1>
-
-       <p class="hero-sub">
+<h1>
+  Less Manual Work.<br>
+  Better Organized Business.<br>
+  <span>Clearer Results.</span>
+</h1>
+       
+    <p class="hero-sub">
   Helping businesses stay organized, keep work moving, and reduce repetitive tasks through reliable VA support and practical automation.
 </p>
 
@@ -337,11 +337,6 @@ footer{
           <a class="btn btn-primary" href="#projects">See The Work →</a>
           <a class="btn btn-secondary" href="mailto:sanchezmitch77@gmail.com">Start a Project →</a>
         </div>
-
-<p class="hero-note">
-  From administrative support and reporting to finance tracking and workflow
-  improvements, the focus is on keeping day-to-day work organized and moving.
-</p>
       </div>
     </div>
   </header>
@@ -349,7 +344,7 @@ footer{
   <!-- SERVICES -->
   <section id="services">
     <div class="container">
-      <div class="section-label">01 / What Gets Covered</div>
+      <div class="section-label">01 / Services</div>
       <h2 class="section-title">Work that fits day to day business needs.</h2>
 
       <p class="section-intro">
