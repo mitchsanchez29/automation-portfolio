@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Michelle Sanchez — Automation, Reporting & Operations portfolio.">
-<title>Michelle Sanchez | Automation, Reporting & Operations</title>
+<meta name="description" content="Michelle Sanchez | AI Administrative Virtual Assistant, Reporting and Workflow Support.">
+<title>Michelle Sanchez | AI Administrative VA, Reporting and Workflow Automation Support</title>
 
 <style>
 :root{
@@ -94,6 +94,14 @@ nav ul a:hover{color:var(--text)}
   color:var(--muted);
   font-size:18px;
 }
+.hero-note{
+  margin-top:38px;
+  padding-top:30px;
+  border-top:1px solid var(--border);
+  max-width:760px;
+  color:var(--muted);
+  font-size:15px;
+}
 .actions{display:flex;gap:12px;flex-wrap:wrap}
 .btn{
   display:inline-block;
@@ -165,6 +173,14 @@ section{padding:92px 0;border-bottom:1px solid var(--border)}
 }
 .service h3{font-size:18px;margin-bottom:9px}
 .service p{color:var(--muted);font-size:14px}
+.service .service-label{
+  color:var(--dim);
+  font:400 9px var(--mono);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin-top:14px;
+  margin-bottom:3px;
+}
 .output{
   margin-top:20px;
   padding-top:15px;
@@ -173,6 +189,16 @@ section{padding:92px 0;border-bottom:1px solid var(--border)}
   font:400 10px var(--mono);
   text-transform:uppercase;
   letter-spacing:.04em;
+}
+
+.tools-grid{display:flex;flex-wrap:wrap;gap:10px}
+.tool-chip{
+  padding:9px 15px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:20px;
+  font:400 12px var(--mono);
+  color:var(--muted);
 }
 
 .projects{
@@ -218,43 +244,11 @@ section{padding:92px 0;border-bottom:1px solid var(--border)}
 }
 .project-link:hover{text-decoration:underline}
 
-
 .feedback-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.feedback-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden}
-.feedback-card img{display:block;width:100%;height:auto}
-.feedback-meta{padding:13px 16px;color:var(--accent);font:400 10px var(--mono);letter-spacing:.06em}
+.feedback-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden;padding:20px}
+.feedback-quote-text{font-size:15px;line-height:1.6;margin-bottom:10px}
+.feedback-meta{color:var(--accent);font:400 10px var(--mono);letter-spacing:.06em}
 @media(max-width:850px){.feedback-grid{grid-template-columns:1fr}}
-.feedback{
-  padding:32px;
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:8px;
-}
-.feedback-quote{
-  max-width:850px;
-  font-size:20px;
-  line-height:1.55;
-}
-.feedback-note{
-  margin-top:18px;
-  color:var(--dim);
-  font:400 10px var(--mono);
-  letter-spacing:.08em;
-}
-
-.experience{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:14px;
-}
-.experience-card{
-  padding:21px;
-  background:var(--surface);
-  border:1px solid var(--border);
-  border-radius:7px;
-}
-.experience-card h3{font-size:15px;margin-bottom:5px}
-.experience-card p{color:var(--muted);font-size:13px}
 
 .full-portfolio{
   background:
@@ -292,7 +286,7 @@ footer{
 
 @media(max-width:850px){
   nav ul{display:none}
-  .about-grid,.services,.projects,.experience{grid-template-columns:1fr}
+  .about-grid,.services,.projects{grid-template-columns:1fr}
   .hero h1{font-size:clamp(42px,12vw,65px)}
 }
 @media(max-width:560px){
@@ -302,7 +296,6 @@ footer{
   .hero-content{padding:125px 0 80px}
   .hero-sub{font-size:16px}
   .section-title{font-size:29px}
-  .feedback{padding:24px}
 }
 </style>
 </head>
@@ -313,8 +306,8 @@ footer{
   <div class="nav-inner">
     <a class="logo" href="#top">MICHELLE / PORTFOLIO</a>
     <ul>
-      <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
+      <li><a href="#tools">Tools</a></li>
       <li><a href="#projects">Work</a></li>
       <li><a href="#feedback">Feedback</a></li>
     </ul>
@@ -328,122 +321,91 @@ footer{
   <header class="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="eyebrow">Automation · Reporting · Operations</div>
+        <div class="eyebrow">Automation &amp; Reporting Specialist &middot; AI Administrative VA</div>
 
         <h1>
-          Better Processes.<br>
-          Clearer Reporting.<br>
-          <span>Less Manual Work.</span>
+          Spreadsheets Organized.<br>
+          Workflows Automated.<br>
+          <span>Admin Handled.</span>
         </h1>
 
-        <p class="hero-sub">
-          Automation, reporting, and operations solutions built to turn
-          repetitive processes and scattered data into reliable, usable systems.
-        </p>
+       <p class="hero-sub">
+  Helping businesses stay organized, keep work moving, and reduce repetitive tasks through reliable VA support and practical automation.
+</p>
 
         <div class="actions">
-          <a class="btn btn-primary" href="#projects">View Featured Work →</a>
-          <a class="btn btn-secondary" href="mailto:sanchezmitch77@gmail.com">Work With Me →</a>
+          <a class="btn btn-primary" href="#projects">See The Work →</a>
+          <a class="btn btn-secondary" href="mailto:sanchezmitch77@gmail.com">Start a Project →</a>
         </div>
+
+<p class="hero-note">
+  From administrative support and reporting to finance tracking and workflow
+  improvements, the focus is on keeping day-to-day work organized and moving.
+</p>
       </div>
     </div>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="container">
-      <div class="section-label">01 / About</div>
-      <h2 class="section-title">Built around the business problem.</h2>
-
-      <div class="about-grid">
-        <div class="about-copy">
-          <p>
-            Strong systems start with understanding how the work actually moves.
-            The focus is on finding where information gets stuck, where manual
-            work creates unnecessary effort, and where reporting becomes difficult
-            to trust.
-          </p>
-
-          <p>
-            Experience across marketing agencies, high-ticket sales operations, real estate, finance, e-commerce, research, reporting, and automation brings together the revenue, operational, and technical sides of a business.
-          </p>
-        </div>
-
-        <div class="process">
-          <div class="process-item">
-            <strong>Understand</strong>
-            <small>Map the process and identify the real bottleneck.</small>
-          </div>
-          <div class="process-item">
-            <strong>Organize</strong>
-            <small>Create a reliable structure and source of truth.</small>
-          </div>
-          <div class="process-item">
-            <strong>Improve</strong>
-            <small>Remove unnecessary steps and friction.</small>
-          </div>
-          <div class="process-item">
-            <strong>Automate</strong>
-            <small>Reduce repetitive work where automation makes sense.</small>
-          </div>
-          <div class="process-item">
-            <strong>Measure</strong>
-            <small>Make the output visible through useful reporting.</small>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- SERVICES -->
   <section id="services">
     <div class="container">
-      <div class="section-label">02 / What Gets Delivered</div>
-      <h2 class="section-title">Services built around the output.</h2>
+      <div class="section-label">01 / What Gets Covered</div>
+      <h2 class="section-title">Work that fits day to day business needs.</h2>
 
       <p class="section-intro">
-        The tools are only part of the work. The focus is on what the business
-        can actually use when the project is finished.
-      </p>
+  Practical support for the tasks, reporting, and workflows that keep your
+  business running day to day.
+</p>
 
       <div class="services">
 
         <article class="service">
-          <h3>Workflow Automation</h3>
-          <p>
-            Connected workflows that reduce repetitive manual steps and move
-            information between systems more efficiently.
-          </p>
-          <div class="output">Output → Working, repeatable workflow</div>
+          <h3>Administrative Support</h3>
+          <div class="service-label">Problem</div>
+          <p>Inbox, documents, and day to day tasks pile up without dedicated support.</p>
+          <div class="output">Output → Organized inbox, documents, and records, kept current</div>
         </article>
 
         <article class="service">
-          <h3>Reporting & Dashboards</h3>
-          <p>
-            Structured reporting systems that turn raw business data into
-            clear operational and performance visibility.
-          </p>
-          <div class="output">Output → Reliable reporting layer</div>
+          <h3>Reporting &amp; Dashboards</h3>
+          <div class="service-label">Problem</div>
+          <p>Reports get rebuilt manually each time, and the numbers are hard to trust.</p>
+          <div class="output">Output → Dashboards and reports that stay accurate and ready to check</div>
         </article>
 
         <article class="service">
-          <h3>Finance & Operations</h3>
-          <p>
-            Organized trackers, payment workflows, AR monitoring, and
-            operational reporting that make financial processes easier to manage.
-          </p>
-          <div class="output">Output → Centralized operational visibility</div>
+          <h3>Finance &amp; Lead Support</h3>
+          <div class="service-label">Problem</div>
+          <p>Payment tracking and lead follow up fall behind without dedicated support.</p>
+          <div class="output">Output → Accounts receivable tracking and lead records kept current</div>
         </article>
 
         <article class="service">
-          <h3>AI-Assisted Operations</h3>
-          <p>
-            AI-supported workflows for research, documentation, data processing,
-            and repetitive operational tasks.
-          </p>
-          <div class="output">Output → Faster, more structured execution</div>
+          <h3>Workflow Support</h3>
+          <div class="service-label">Problem</div>
+          <p>Repetitive manual steps, approvals, and multi-stage processes take up time that could go toward higher value work.</p>
+          <div class="output">Output → Workflows built with Google Apps Script that move data, trigger updates, and cut out manual steps</div>
         </article>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- TOOLS -->
+  <section id="tools">
+    <div class="container">
+      <div class="section-label">02 / Tools</div>
+      <h2 class="section-title">The tools behind the work.</h2>
+
+      <div class="tools-grid">
+        <span class="tool-chip">Google Workspace</span>
+        <span class="tool-chip">Google Sheets</span>
+        <span class="tool-chip">Google Apps Script</span>
+        <span class="tool-chip">Zapier</span>
+        <span class="tool-chip">Airtable</span>
+        <span class="tool-chip">Looker Studio</span>
+        <span class="tool-chip">APIs &amp; Integrations</span>
+        <span class="tool-chip">AI-Assisted Workflows (Claude &amp; ChatGPT)</span>
       </div>
     </div>
   </section>
@@ -455,19 +417,19 @@ footer{
       <h2 class="section-title">Selected work. Practical solutions.</h2>
 
       <p class="section-intro">
-        Three projects that show how automation, reporting, and finance
-        operations can work together to create usable business systems.
+        Three projects that show how reporting, tracking, and workflow support come
+        together to create usable, day to day systems.
       </p>
 
       <div class="projects">
 
         <article class="project">
-          <div class="project-number">01 / BUSINESS AUTOMATION</div>
-          <h3>Lead Operations Management System</h3>
+          <div class="project-number">01 / WORKFLOW SUPPORT</div>
+          <h3>Lead Tracking &amp; Coordination System</h3>
 
           <div class="label">Problem</div>
           <p>
-            A 8-stage lead coordination process depended on multiple
+            An eight-stage lead coordination process depended on multiple
             spreadsheets and manual updates, making progress difficult to monitor.
           </p>
 
@@ -521,8 +483,8 @@ footer{
         </article>
 
         <article class="project">
-          <div class="project-number">03 / FINANCE OPERATIONS</div>
-          <h3>Upcoming & Delayed Payments Tracker</h3>
+          <div class="project-number">03 / FINANCE SUPPORT</div>
+          <h3>Upcoming &amp; Delayed Payments Tracker</h3>
 
           <div class="label">Problem</div>
           <p>
@@ -538,7 +500,7 @@ footer{
 
           <div class="label">Result</div>
           <p class="result">
-            Better cash-flow visibility and faster follow-up without manually
+            Better cash flow visibility and faster follow up without manually
             cross-checking spreadsheets.
           </p>
 
@@ -563,18 +525,22 @@ footer{
       </p>
 
       <div class="feedback-grid">
-Upwork Client
-“Great work! Will be having Michelle do more work for us when we can.”
-
-Upwork Client
-5.0 — Data Extraction / eBay Information Collection/Data Entry
-
-OLJ Client
-“We had a great experience working with Michelle. She performed her tasks efficiently and promptly and were very happy with her performance.”
-
-OLJ Client
-“We’re thankful for employees like you that are putting in the hard work to move our company forward.”
-     
+        <div class="feedback-card">
+          <p class="feedback-quote-text">"Great work! Will be having Michelle do more work for us when we can."</p>
+          <div class="feedback-meta">UPWORK CLIENT</div>
+        </div>
+        <div class="feedback-card">
+          <p class="feedback-quote-text">5.0 rating — Data Extraction / eBay Information Collection &amp; Data Entry</p>
+          <div class="feedback-meta">UPWORK CLIENT</div>
+        </div>
+        <div class="feedback-card">
+          <p class="feedback-quote-text">"We had a great experience working with Michelle. She performed her tasks efficiently and promptly and we were very happy with her performance."</p>
+          <div class="feedback-meta">OLJ CLIENT</div>
+        </div>
+        <div class="feedback-card">
+          <p class="feedback-quote-text">"We're thankful for employees like you that are putting in the hard work to move our company forward."</p>
+          <div class="feedback-meta">OLJ CLIENT</div>
+        </div>
       </div>
     </div>
   </section>
@@ -583,14 +549,13 @@ OLJ Client
   <section id="portfolio">
     <div class="container">
       <div class="full-portfolio">
-        <div class="section-label">06 / Full Portfolio</div>
+        <div class="section-label">05 / Full Portfolio</div>
 
         <h2>See the work behind the results.</h2>
 
         <p>
-          Explore the full collection of automation, reporting, analytics,
-          and finance operations projects, including workflows, documentation,
-          screenshots, and implementation details.
+          Explore the full collection of reporting, tracking, and workflow support
+          projects, including documentation, screenshots, and implementation details.
         </p>
 
         <a class="btn btn-primary"
@@ -605,7 +570,7 @@ OLJ Client
 </main>
 
 <footer>
-  MICHELLE SANCHEZ · AUTOMATION, REPORTING & OPERATIONS
+  MICHELLE SANCHEZ · AI ADMINISTRATIVE VA · REPORTING &amp; WORKFLOW AUTOMATION SUPPORT
 
   <div class="footer-links">
     <a href="https://github.com/mitchsanchez29" target="_blank" rel="noopener">GitHub</a>
