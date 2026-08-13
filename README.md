@@ -3,1100 +3,615 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Michelle · Virtual Assistant | Automation & Operations Support</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="Michelle Sanchez — Automation, Reporting & Operations portfolio.">
+<title>Michelle Sanchez | Automation, Reporting & Operations</title>
+
 <style>
-:root {
-  --bg: #0a0a0f;
-  --surface: #111118;
-  --surface2: #18181f;
-  --border: rgba(255,255,255,0.07);
-  --border2: rgba(255,255,255,0.12);
-  --text: #f0f0f5;
-  --muted: #8888a0;
-  --dim: #55556a;
-  --accent: #00e5a0;
-  --accent2: #4f7fff;
-  --accent3: #ff6b6b;
-  --amber: #ffb347;
-  --mono: 'DM Mono', monospace;
-  --sans: 'Sora', sans-serif;
+:root{
+  --bg:#0a0d12;
+  --surface:#11161d;
+  --surface-2:#151c24;
+  --border:#27313d;
+  --text:#f4f7f8;
+  --muted:#a2adb8;
+  --dim:#6f7c89;
+  --accent:#65e6b5;
+  --accent-soft:rgba(101,230,181,.08);
+  --sans:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Consolas,"Liberation Mono",monospace;
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: var(--sans);
-  font-size: 15px;
-  line-height: 1.6;
-  min-height: 100vh;
-  overflow-x: hidden;
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--sans);
+  line-height:1.65;
+}
+a{color:inherit}
+.container{max-width:1120px;margin:auto;padding:0 28px}
+
+nav{
+  position:fixed;
+  z-index:100;
+  top:0;left:0;right:0;
+  background:rgba(10,13,18,.9);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav-inner{
+  max-width:1120px;
+  margin:auto;
+  padding:15px 28px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font:500 12px var(--mono);
+  color:var(--accent);
+  letter-spacing:.05em;
+  text-decoration:none;
+}
+nav ul{display:flex;gap:25px;list-style:none}
+nav ul a{
+  color:var(--muted);
+  text-decoration:none;
+  font:400 11px var(--mono);
+}
+nav ul a:hover{color:var(--text)}
+.nav-contact{
+  border:1px solid var(--accent);
+  color:var(--accent)!important;
+  padding:7px 12px;
+  border-radius:5px;
 }
 
-/* Grid background */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(0,229,160,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0,229,160,0.03) 1px, transparent 1px);
-  background-size: 40px 40px;
-  pointer-events: none;
-  z-index: 0;
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  border-bottom:1px solid var(--border);
+}
+.hero-content{padding:150px 0 100px}
+.eyebrow,.section-label{
+  color:var(--accent);
+  font:400 11px var(--mono);
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+.eyebrow{margin-bottom:24px}
+.hero h1{
+  max-width:900px;
+  font-size:clamp(44px,7vw,78px);
+  line-height:1.03;
+  letter-spacing:-.05em;
+}
+.hero h1 span{color:var(--accent)}
+.hero-sub{
+  max-width:720px;
+  margin:28px 0 34px;
+  color:var(--muted);
+  font-size:18px;
+}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  padding:11px 17px;
+  border:1px solid var(--border);
+  border-radius:5px;
+  text-decoration:none;
+  font:500 11px var(--mono);
+  transition:.2s ease;
+}
+.btn-primary{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#07110d;
+}
+.btn-primary:hover{transform:translateY(-1px)}
+.btn-secondary{color:var(--muted)}
+.btn-secondary:hover{border-color:#596777;color:var(--text)}
+
+section{padding:92px 0;border-bottom:1px solid var(--border)}
+.section-label{margin-bottom:12px}
+.section-title{
+  font-size:34px;
+  line-height:1.15;
+  letter-spacing:-.035em;
+  margin-bottom:15px;
+}
+.section-intro{
+  max-width:700px;
+  color:var(--muted);
+  margin-bottom:42px;
 }
 
-/* NAV */
-nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 2.5rem;
-  background: rgba(10,10,15,0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border);
+.about-grid{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:70px;
 }
-.nav-logo {
-  font-family: var(--mono);
-  font-size: 13px;
-  color: var(--accent);
-  letter-spacing: 0.04em;
+.about-copy p{
+  color:var(--muted);
+  margin-bottom:18px;
+  font-size:16px;
 }
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
+.process{display:grid;gap:10px}
+.process-item{
+  padding:17px 18px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:7px;
 }
-.nav-links a {
-  font-size: 12px;
-  color: var(--muted);
-  text-decoration: none;
-  font-family: var(--mono);
-  letter-spacing: 0.05em;
-  transition: color 0.2s;
-}
-.nav-links a:hover { color: var(--text); }
-.nav-cta {
-  font-size: 12px;
-  font-family: var(--mono);
-  padding: 6px 16px;
-  background: transparent;
-  border: 1px solid var(--accent);
-  color: var(--accent);
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-.nav-cta:hover { background: var(--accent); color: var(--bg); }
-
-/* MAIN WRAPPER */
-main { position: relative; z-index: 1; }
-
-/* HERO */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 8rem 2.5rem 4rem;
-  max-width: 900px;
-  margin: 0 auto;
-}
-.hero-eyebrow {
-  font-family: var(--mono);
-  font-size: 12px;
-  color: var(--accent);
-  letter-spacing: 0.1em;
-  margin-bottom: 1.5rem;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.hero-eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 24px;
-  height: 1px;
-  background: var(--accent);
-}
-.hero h1 {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  font-weight: 600;
-  line-height: 1.15;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.02em;
-}
-.hero h1 span {
-  color: transparent;
-  -webkit-text-stroke: 1px rgba(255,255,255,0.3);
-}
-.hero h1 em {
-  font-style: normal;
-  color: var(--accent);
-}
-.hero-summary {
-  font-size: 16px;
-  color: var(--muted);
-  max-width: 580px;
-  line-height: 1.75;
-  margin-bottom: 2.5rem;
-}
-.hero-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 4rem;
-}
-.btn {
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  padding: 10px 22px;
-  border-radius: 4px;
-  cursor: pointer;
-  text-decoration: none;
-  transition: all 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  border: none;
-}
-.btn-accent { background: var(--accent); color: var(--bg); }
-.btn-accent:hover { background: #00c88a; }
-.btn-ghost { background: transparent; border: 1px solid var(--border2); color: var(--muted); }
-.btn-ghost:hover { border-color: var(--text); color: var(--text); }
-
-.hero-stats {
-  display: flex;
-  gap: 3rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid var(--border);
-}
-.stat-num {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--text);
-  line-height: 1;
-}
-.stat-num span { color: var(--accent); }
-.stat-label {
-  font-size: 12px;
-  color: var(--dim);
-  font-family: var(--mono);
-  margin-top: 4px;
+.process-item strong{font-size:14px}
+.process-item small{
+  display:block;
+  margin-top:3px;
+  color:var(--dim);
+  font:400 10px var(--mono);
 }
 
-/* SECTION COMMON */
-section {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 5rem 2.5rem;
-  border-top: 1px solid var(--border);
+.services{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:16px;
 }
-.section-header {
-  display: flex;
-  align-items: baseline;
-  gap: 1rem;
-  margin-bottom: 3rem;
+.service{
+  padding:27px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:8px;
 }
-.section-num {
-  font-family: var(--mono);
-  font-size: 11px;
-  color: var(--accent);
-  letter-spacing: 0.1em;
-}
-.section-title {
-  font-size: 1.5rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-.section-line {
-  flex: 1;
-  height: 1px;
-  background: var(--border);
+.service h3{font-size:18px;margin-bottom:9px}
+.service p{color:var(--muted);font-size:14px}
+.output{
+  margin-top:20px;
+  padding-top:15px;
+  border-top:1px solid var(--border);
+  color:var(--accent);
+  font:400 10px var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.04em;
 }
 
-/* PROJECTS */
-.projects-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+.projects{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
 }
-.project-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.5rem;
-  transition: border-color 0.2s, transform 0.2s;
-  position: relative;
-  overflow: hidden;
+.project{
+  display:flex;
+  flex-direction:column;
+  padding:25px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:8px;
 }
-.project-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0;
-  right: 0; height: 2px;
-  background: var(--card-accent, var(--accent));
-  opacity: 0;
-  transition: opacity 0.2s;
+.project:hover{border-color:#3b4856}
+.project-number{
+  color:var(--accent);
+  font:400 10px var(--mono);
+  letter-spacing:.08em;
+  margin-bottom:18px;
 }
-.project-card:hover { border-color: var(--border2); transform: translateY(-2px); }
-.project-card:hover::before { opacity: 1; }
-.project-card.wide { grid-column: span 2; }
+.project h3{
+  font-size:19px;
+  line-height:1.3;
+  margin-bottom:12px;
+}
+.label{
+  color:var(--dim);
+  font:400 9px var(--mono);
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin-top:14px;
+  margin-bottom:3px;
+}
+.project p{color:var(--muted);font-size:13px}
+.project .result{color:var(--text)}
+.project-link{
+  margin-top:22px;
+  color:var(--accent);
+  font:400 10px var(--mono);
+  text-decoration:none;
+}
+.project-link:hover{text-decoration:underline}
 
-.card-top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
-.card-icon {
-  width: 36px; height: 36px;
-  border-radius: 6px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 17px;
-}
-.card-role {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--muted);
-  background: var(--surface2);
-  padding: 3px 8px;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-}
-.card-title {
-  font-size: 15px;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-  line-height: 1.3;
-}
-.card-desc {
-  font-size: 13px;
-  color: var(--muted);
-  line-height: 1.65;
-  margin-bottom: 1.25rem;
-}
 
-/* Flow pipeline */
-.flow {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 4px;
-  margin-bottom: 1.25rem;
+.feedback-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.feedback-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;overflow:hidden}
+.feedback-card img{display:block;width:100%;height:auto}
+.feedback-meta{padding:13px 16px;color:var(--accent);font:400 10px var(--mono);letter-spacing:.06em}
+@media(max-width:850px){.feedback-grid{grid-template-columns:1fr}}
+.feedback{
+  padding:32px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:8px;
 }
-.flow-node {
-  font-family: var(--mono);
-  font-size: 10px;
-  padding: 3px 8px;
-  border-radius: 3px;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  color: var(--muted);
-  white-space: nowrap;
+.feedback-quote{
+  max-width:850px;
+  font-size:20px;
+  line-height:1.55;
 }
-.flow-arrow {
-  font-size: 10px;
-  color: var(--dim);
+.feedback-note{
+  margin-top:18px;
+  color:var(--dim);
+  font:400 10px var(--mono);
+  letter-spacing:.08em;
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
+.experience{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
 }
-.tag {
-  font-family: var(--mono);
-  font-size: 10px;
-  padding: 2px 8px;
-  border-radius: 20px;
-  border: 1px solid var(--border);
-  color: var(--dim);
+.experience-card{
+  padding:21px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:7px;
 }
-.tag.accent { border-color: rgba(0,229,160,0.3); color: var(--accent); }
-.tag.blue { border-color: rgba(79,127,255,0.3); color: var(--accent2); }
-.tag.amber { border-color: rgba(255,179,71,0.3); color: var(--amber); }
+.experience-card h3{font-size:15px;margin-bottom:5px}
+.experience-card p{color:var(--muted);font-size:13px}
 
-/* COLOR VARIANTS */
-.c-green { --card-accent: #00e5a0; }
-.c-green .card-icon { background: rgba(0,229,160,0.1); color: var(--accent); }
-.c-blue { --card-accent: #4f7fff; }
-.c-blue .card-icon { background: rgba(79,127,255,0.1); color: var(--accent2); }
-.c-amber { --card-accent: #ffb347; }
-.c-amber .card-icon { background: rgba(255,179,71,0.1); color: var(--amber); }
-.c-red { --card-accent: #ff6b6b; }
-.c-red .card-icon { background: rgba(255,107,107,0.1); color: var(--accent3); }
-.c-purple { --card-accent: #a78bfa; }
-.c-purple .card-icon { background: rgba(167,139,250,0.1); color: #a78bfa; }
-.c-teal { --card-accent: #2dd4bf; }
-.c-teal .card-icon { background: rgba(45,212,191,0.1); color: #2dd4bf; }
-.c-coral { --card-accent: #fb923c; }
-.c-coral .card-icon { background: rgba(251,146,60,0.1); color: #fb923c; }
-
-/* SKILLS */
-.skills-categories {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+.full-portfolio{
+  background:
+    linear-gradient(135deg,rgba(101,230,181,.07),transparent 60%),
+    var(--surface);
+  border:1px solid #30443c;
+  border-radius:10px;
+  padding:54px 30px;
+  text-align:center;
 }
-.skill-group {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 1.25rem;
+.full-portfolio h2{
+  font-size:34px;
+  line-height:1.15;
+  margin:12px 0;
 }
-.skill-group-title {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--accent);
-  letter-spacing: 0.08em;
-  margin-bottom: 1rem;
-  text-transform: uppercase;
-}
-.skill-list {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.skill-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 12px;
-  color: var(--muted);
-}
-.skill-dot {
-  width: 5px; height: 5px;
-  border-radius: 50%;
-  flex-shrink: 0;
+.full-portfolio p{
+  max-width:680px;
+  margin:0 auto 26px;
+  color:var(--muted);
 }
 
-/* TOOLS STRIP */
-.tools-strip {
-  margin-top: 2rem;
-  padding: 1.25rem 1.5rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  flex-wrap: wrap;
+footer{
+  padding:55px 0 70px;
+  text-align:center;
+  color:var(--dim);
+  font:400 10px var(--mono);
 }
-.tools-label {
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--dim);
-  letter-spacing: 0.08em;
-  white-space: nowrap;
+.footer-links{margin-top:14px}
+.footer-links a{
+  color:var(--muted);
+  text-decoration:none;
+  margin:0 9px;
 }
-.tools-divider { width: 1px; height: 20px; background: var(--border); }
-.tools-items {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-.tool-pill {
-  font-family: var(--mono);
-  font-size: 11px;
-  padding: 4px 10px;
-  background: var(--surface2);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  color: var(--muted);
-}
+.footer-links a:hover{color:var(--accent)}
 
-/* ABOUT */
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: start;
+@media(max-width:850px){
+  nav ul{display:none}
+  .about-grid,.services,.projects,.experience{grid-template-columns:1fr}
+  .hero h1{font-size:clamp(42px,12vw,65px)}
 }
-.about-text p {
-  font-size: 15px;
-  color: var(--muted);
-  line-height: 1.8;
-  margin-bottom: 1rem;
-}
-.about-text p strong { color: var(--text); font-weight: 500; }
-.about-meta {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-.meta-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 1rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-}
-.meta-icon { font-size: 18px; flex-shrink: 0; }
-.meta-label { font-family: var(--mono); font-size: 10px; color: var(--dim); margin-bottom: 2px; }
-.meta-value { font-size: 13px; color: var(--text); }
-
-/* CONTACT */
-.contact-inner {
-  text-align: center;
-  padding: 3rem 2rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  position: relative;
-  overflow: hidden;
-}
-.contact-inner::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(ellipse at center top, rgba(0,229,160,0.06) 0%, transparent 70%);
-  pointer-events: none;
-}
-.contact-inner h2 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 0.75rem;
-  letter-spacing: -0.02em;
-}
-.contact-inner p { color: var(--muted); margin-bottom: 2rem; font-size: 14px; }
-.contact-links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-
-/* FOOTER */
-footer {
-  border-top: 1px solid var(--border);
-  padding: 2rem 2.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 960px;
-  margin: 0 auto;
-}
-footer p { font-family: var(--mono); font-size: 11px; color: var(--dim); }
-
-/* ANIMATIONS */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.hero > * {
-  animation: fadeUp 0.6s ease both;
-}
-.hero-eyebrow { animation-delay: 0.1s; }
-.hero h1 { animation-delay: 0.2s; }
-.hero-summary { animation-delay: 0.3s; }
-.hero-actions { animation-delay: 0.4s; }
-.hero-stats { animation-delay: 0.5s; }
-
-/* RESPONSIVE */
-@media (max-width: 700px) {
-  nav { padding: 1rem 1.25rem; }
-  .nav-links { display: none; }
-  .hero { padding: 7rem 1.25rem 3rem; }
-  .hero h1 { font-size: 2rem; }
-  .hero-stats { gap: 1.5rem; flex-wrap: wrap; }
-  section { padding: 3rem 1.25rem; }
-  .projects-grid { grid-template-columns: 1fr; }
-  .project-card.wide { grid-column: span 1; }
-  .skills-categories { grid-template-columns: 1fr; }
-  .about-grid { grid-template-columns: 1fr; }
-  footer { flex-direction: column; gap: 1rem; text-align: center; }
+@media(max-width:560px){
+  .container{padding:0 21px}
+  .nav-inner{padding:14px 21px}
+  section{padding:72px 0}
+  .hero-content{padding:125px 0 80px}
+  .hero-sub{font-size:16px}
+  .section-title{font-size:29px}
+  .feedback{padding:24px}
 }
 </style>
 </head>
+
 <body>
 
 <nav>
-  <span class="nav-logo">michelle.dev</span>
-  <ul class="nav-links">
-    <li><a href="#projects">projects</a></li>
-    <li><a href="#skills">skills</a></li>
-    <li><a href="#about">about</a></li>
-    <li><a href="#contact">contact</a></li>
-  </ul>
-  <a href="#contact" class="nav-cta">hire me →</a>
+  <div class="nav-inner">
+    <a class="logo" href="#top">MICHELLE / PORTFOLIO</a>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#projects">Work</a></li>
+      <li><a href="#feedback">Feedback</a></li>
+    </ul>
+    <a class="nav-contact" href="mailto:sanchezmitch77@gmail.com">Contact</a>
+  </div>
 </nav>
 
-<main>
+<main id="top">
 
-<!-- HERO -->
-<div class="hero">
-  <div class="hero-eyebrow">Available for freelance · Remote · Philippines</div>
- <h1>
-    Virtual Assistant <em>|</em><br>
-    <span>Automation & Operations</span><br>
-    Support
-</h1>
-<p class="hero-summary">
-    Detail-oriented Virtual Assistant with experience in administrative support and workflow automation. Skilled in <strong>Google Workspace, Zapier, Looker Studio, and Apps Script</strong>. I enjoy creating organized systems and helping teams work more efficiently.
-</p>
-  <div class="hero-actions">
-    <a href="#projects" class="btn btn-accent">view projects ↓</a>
-    <a href="https://github.com/mitchsanchez29" class="btn btn-ghost" target="_blank">GitHub ↗</a>
-    <a href="#contact" class="btn btn-ghost">get in touch</a>
-  </div>
-  <div class="hero-stats">
-    <div>
-      <div class="stat-num">10<span>+</span></div>
-      <div class="stat-label">// automation projects</div>
-    </div>
-    <div>
-      <div class="stat-num">15<span>+</span></div>
-      <div class="stat-label">// tools & APIs</div>
-    </div>
-    <div>
-      <div class="stat-num">5<span>+</span></div>
-      <div class="stat-label">// reporting dashboards</div>
-    </div>
-  </div>
-</div>
+  <!-- LANDING PAGE -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="eyebrow">Automation · Reporting · Operations</div>
 
-<!-- PROJECTS -->
-<section id="projects">
-  <div class="section-header">
-    <span class="section-num">01 //</span>
-    <h2 class="section-title">Projects</h2>
-    <div class="section-line"></div>
-  </div>
+        <h1>
+          Better Processes.<br>
+          Clearer Reporting.<br>
+          <span>Less Manual Work.</span>
+        </h1>
 
-  <div class="projects-grid">
+        <p class="hero-sub">
+          Automation, reporting, and operations solutions built to turn
+          repetitive processes and scattered data into reliable, usable systems.
+        </p>
 
-    <!-- 1. Quotation CRM -->
-    <div class="project-card c-green">
-      <div class="card-top">
-        <div class="card-icon">📄</div>
-        <span class="card-role">sole builder</span>
-      </div>
-      <div class="card-title">Automated Quotation & CRM System</div>
-      <div class="flow">
-        <span class="flow-node">Google Forms</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Sheets</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Docs</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">PDF</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Gmail</span>
-      </div>
-      <div class="card-desc">
-        Auto-generates unique quote numbers, produces PDF documents via Apps Script, tracks status in Sheets, and delivers to clients via Gmail — all triggered on form submission.
-      </div>
-      <div class="tags">
-        <span class="tag accent">Apps Script</span>
-        <span class="tag">CRM</span>
-        <span class="tag">PDF Generation</span>
-        <span class="tag">Drive</span>
-      </div>
-    </div>
-
-    <!-- 2. YouTube Analytics -->
-    <div class="project-card c-blue">
-      <div class="card-top">
-        <div class="card-icon">📊</div>
-        <span class="card-role">sole builder</span>
-      </div>
-      <div class="card-title">YouTube Analytics Reporting Pipeline</div>
-      <div class="flow">
-        <span class="flow-node">YouTube API</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Apps Script</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Sheets</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Looker Studio</span>
-      </div>
-      <div class="card-desc">
-        Daily automated data pull from YouTube Analytics API into a Sheets data warehouse, powering a live Looker Studio dashboard for channel performance reporting.
-      </div>
-      <div class="tags">
-        <span class="tag blue">YouTube API</span>
-        <span class="tag">Looker Studio</span>
-        <span class="tag">REST API</span>
-        <span class="tag">JSON</span>
-      </div>
-    </div>
-
-    <!-- 3. Facebook Ads Dashboard -->
-    <div class="project-card c-blue">
-      <div class="card-top">
-        <div class="card-icon">📱</div>
-        <span class="card-role">sole builder</span>
-      </div>
-      <div class="card-title">Facebook Ads Performance Dashboard</div>
-      <div class="flow">
-        <span class="flow-node">Facebook Ads</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">OAuth Token</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Partner Connector</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Looker Studio</span>
-      </div>
-      <div class="card-desc">
-        Connected Facebook Ads to Looker Studio via OAuth token and partner connector. Live dashboard shows campaign spend, reach, CPM, CTR, and results — no manual exports needed.
-      </div>
-      <div class="tags">
-        <span class="tag blue">Facebook Ads API</span>
-        <span class="tag">OAuth Token</span>
-        <span class="tag">Looker Studio</span>
-        <span class="tag">Marketing Analytics</span>
-      </div>
-    </div>
-
-    <!-- 4. Google Ads + Analytics Dashboard -->
-    <div class="project-card c-amber">
-      <div class="card-top">
-        <div class="card-icon">📈</div>
-        <span class="card-role">sole builder</span>
-      </div>
-      <div class="card-title">Google Ads & Analytics Performance Report</div>
-      <div class="flow">
-        <span class="flow-node">Google Ads</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Google Analytics</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Native Connectors</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Looker Studio</span>
-      </div>
-      <div class="card-desc">
-        Multi-page Looker Studio report connected to Google Ads and Analytics via native connectors. Features Week-over-Week, Month-over-Month, and Year-to-Date views across separate report pages.
-      </div>
-      <div class="tags">
-        <span class="tag amber">Google Ads</span>
-        <span class="tag">Google Analytics</span>
-        <span class="tag">Looker Studio</span>
-        <span class="tag">WoW · MoM · YTD</span>
-      </div>
-    </div>
-
-    <!-- 5. Airtable / Zapier -->
-    <div class="project-card c-purple">
-      <div class="card-top">
-        <div class="card-icon">🗂️</div>
-        <span class="card-role">team project</span>
-      </div>
-      <div class="card-title">Closer & Setter EOD Data Pipeline</div>
-      <div class="flow">
-        <span class="flow-node">Airtable Form</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Zapier</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Google Sheets</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Looker Studio</span>
-      </div>
-      <div class="card-desc">
-        My role: daily monitoring, data cleaning, and structuring of EOD sales data (cash collected, payments, commissions) submitted by closers and setters — then building and maintaining the Looker Studio performance report.
-      </div>
-      <div class="tags">
-        <span class="tag">Airtable</span>
-        <span class="tag">Zapier</span>
-        <span class="tag">Data Cleaning</span>
-        <span class="tag">Looker Studio</span>
-        <span class="tag">Commissions</span>
-      </div>
-    </div>
-
-    <!-- 6. Upcoming & Delayed Payments Tracker -->
-    <div class="project-card c-coral">
-      <div class="card-top">
-        <div class="card-icon">💰</div>
-        <span class="card-role">sole builder</span>
-      </div>
-      <div class="card-title">Upcoming & Delayed Payments Tracker</div>
-      <div class="flow">
-        <span class="flow-node">Installment Tracker</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Apps Script</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Upcoming / Delayed</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Slack + Looker Studio</span>
-      </div>
-      <div class="card-desc">
-        Apps Script reads the master installment tracker, calculates payment aging, and auto-routes clients: 0–90 days due → Upcoming sheet, 1+ days overdue → Delayed sheet + Slack follow-up alert. Paid entries are auto-removed. Two separate Looker Studio dashboards for each sheet.
-      </div>
-      <div class="tags">
-        <span class="tag accent">Apps Script</span>
-        <span class="tag">Slack Webhook</span>
-        <span class="tag">Looker Studio</span>
-        <span class="tag">Aging Logic</span>
-        <span class="tag">Finance</span>
-      </div>
-    </div>
-
-    <!-- 7. Payment Performance Dashboard -->
-    <div class="project-card c-teal">
-      <div class="card-top">
-        <div class="card-icon">📊</div>
-        <span class="card-role">sole builder</span>
-      </div>
-      <div class="card-title">Payment Performance Dashboard</div>
-      <div class="flow">
-        <span class="flow-node">Payment Tracker</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Google Sheets</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Looker Studio</span>
-      </div>
-      <div class="card-desc">
-        Looker Studio dashboard using a Google Sheets payment tracker as data source. Visualizes total payments, collected amounts, pending balances, and payment status — centralized, real-time, no manual checking needed.
-      </div>
-      <div class="tags">
-        <span class="tag">Looker Studio</span>
-        <span class="tag">Google Sheets</span>
-        <span class="tag">Financial Reporting</span>
-        <span class="tag">Data Visualization</span>
-      </div>
-    </div>
-
-    <!-- 8. Financial Dashboard & P&L -->
-    <div class="project-card c-green">
-      <div class="card-top">
-        <div class="card-icon">📉</div>
-        <span class="card-role">sole builder</span>
-      </div>
-      <div class="card-title">Financial Dashboard & Profit/Loss Reporting</div>
-      <div class="flow">
-        <span class="flow-node">Income + Expenses</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Google Sheets</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">P&L Dashboard</span>
-      </div>
-      <div class="card-desc">
-        Google Sheets dashboard consolidating income, expenses, net cash collected, and profit/loss. Monthly and quarterly performance tracking with automated calculations — business performance visible in one place.
-      </div>
-      <div class="tags">
-        <span class="tag accent">Google Sheets</span>
-        <span class="tag">P&L Reporting</span>
-        <span class="tag">Monthly · Quarterly</span>
-        <span class="tag">Financial Dashboard</span>
-      </div>
-    </div>
-
-    <!-- 9. Webhook & Notifications -->
-    <div class="project-card c-red">
-      <div class="card-top">
-        <div class="card-icon">🔔</div>
-        <span class="card-role">sole builder</span>
-      </div>
-      <div class="card-title">Webhook & Notification Automation</div>
-      <div class="flow">
-        <span class="flow-node">Trigger Event</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Apps Script</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Webhook</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Slack</span>
-      </div>
-      <div class="card-desc">
-        Real-time Slack notifications triggered by workflow events via webhook integrations. Eliminates manual status updates and keeps teams in sync automatically.
-      </div>
-      <div class="tags">
-        <span class="tag">Webhooks</span>
-        <span class="tag">Slack</span>
-        <span class="tag">REST API</span>
-        <span class="tag">Real-time</span>
-      </div>
-    </div>
-
-    <!-- 10. AI Workflows -->
-    <div class="project-card c-purple">
-      <div class="card-top">
-        <div class="card-icon">🤖</div>
-        <span class="card-role">in development</span>
-      </div>
-      <div class="card-title">AI-Powered Workflow Automation</div>
-      <div class="flow">
-        <span class="flow-node">Apps Script</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">ChatGPT API</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Gmail draft</span>
-      </div>
-      <div class="card-desc">
-        Integrating ChatGPT API with Google Apps Script for AI-assisted email drafting and intelligent business workflow automation. Actively expanding this capability.
-      </div>
-      <div class="tags">
-        <span class="tag">ChatGPT API</span>
-        <span class="tag">AI Integration</span>
-        <span class="tag">Gmail</span>
-        <span class="tag">Learning</span>
-      </div>
-    </div>
-
-    <!-- 11. Lead Management System -->
-    <div class="project-card c-green wide">
-      <div class="card-top">
-        <div class="card-icon">🎯</div>
-        <span class="card-role">sole builder</span>
-      </div>
-      <div class="card-title">Lead Management & Follow-Up Automation System</div>
-      <div class="flow">
-        <span class="flow-node">Airtable Form</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Airtable Leads DB</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Zapier</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Google Sheets</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Gmail Notification</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Follow-Up Reminder</span>
-      </div>
-      <div class="card-desc">
-        End-to-end lead management system built from scratch. Designed an Airtable database with a custom lead capture form (Name, Phone, Email, Service Requested) and a 5-stage pipeline: New → Contacted → Estimate Sent → Won → Lost. Automated lead syncing to Google Sheets via Zapier for backup logging, plus Gmail instant notifications on every new submission. Built a follow-up reminder Zap with conditional logic — filters leads by Status=New and Follow Up Count ≤ 2, calculates day of week to skip weekends, and auto-updates Follow Up Count and Last Follow-up Date in Airtable after each reminder is sent.
-      </div>
-      <div class="tags">
-        <span class="tag accent">Airtable</span>
-        <span class="tag accent">Zapier</span>
-        <span class="tag">Google Sheets</span>
-        <span class="tag">Gmail</span>
-        <span class="tag">Lead Tracking</span>
-        <span class="tag">Pipeline Automation</span>
-        <span class="tag">Follow-Up Logic</span>
-        <span class="tag">Conditional Paths</span>
-      </div>
-    </div>
-    
-<!-- 12. Client Ad Reporting -->
-    <div class="project-card c-coral wide">
-      <div class="card-top">
-        <div class="card-icon">📋</div>
-        <span class="card-role">reporting lead</span>
-      </div>
-      <div class="card-title">Facebook & Google Ads Client Reporting</div>
-      <div class="flow">
-        <span class="flow-node">Ad Platforms</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Google Sheets</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">ActiveCampaign API</span>
-        <span class="flow-arrow">→</span>
-        <span class="flow-node">Client Reports</span>
-      </div>
-      <div class="card-desc">
-        Managed weekly Facebook and Google Ads performance reporting for a portfolio of 40 client accounts (12–15 active). Tracked ad spend, leads, cost-per-lead, CTR, CPM, ROAS, and LTV in Google Sheets. Integrated the ActiveCampaign API for one client to automatically pull monthly and annual sales data per campaign. Built an internal tracker to manage the reporting pipeline across all accounts, ensuring no client report was missed.
-      </div>
-      <div class="tags">
-        <span class="tag">Google Sheets</span>
-        <span class="tag">ActiveCampaign API</span>
-        <span class="tag">Facebook Ads</span>
-        <span class="tag">Google Ads</span>
-        <span class="tag">Client Reporting</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills">
-  <div class="section-header">
-    <span class="section-num">02 //</span>
-    <h2 class="section-title">Skills & Tools</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="skills-categories">
-    <div class="skill-group">
-      <div class="skill-group-title">// automation</div>
-      <div class="skill-list">
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent)"></span>Google Apps Script</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent)"></span>Google Sheets Automation</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent)"></span>Gmail Automation</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent)"></span>Google Docs Generation</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent)"></span>Google Drive Automation</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent)"></span>Google Forms</div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">// apis & integrations</div>
-      <div class="skill-list">
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent2)"></span>REST APIs</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent2)"></span>JSON</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent2)"></span>Webhooks</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent2)"></span>YouTube Analytics API</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent2)"></span>Facebook Ads API</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent2)"></span>ChatGPT API (learning)</div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">// reporting & data</div>
-      <div class="skill-list">
-        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Looker Studio</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Data Cleaning</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Data Merging</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Financial Reporting</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>P&L Dashboards</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>CRM Automation</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Workflow Automation</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="tools-strip">
-    <span class="tools-label">ALSO WORKED WITH</span>
-    <div class="tools-divider"></div>
-    <div class="tools-items">
-      <span class="tool-pill">Zapier</span>
-      <span class="tool-pill">Slack</span>
-      <span class="tool-pill">Google Ads</span>
-      <span class="tool-pill">Facebook Ads</span>
-      <span class="tool-pill">Airtable</span>
-      <span class="tool-pill">PDF Generation</span>
-      <span class="tool-pill">Google Drive API</span>
-      <span class="tool-pill">Looker Studio Connectors</span>
-      <span class="tool-pill">UrlFetchApp</span>
-      <span class="tool-pill">ChatGPT API</span>
-    </div>
-  </div>
-</section>
-
-<!-- OPERATIONS BACKGROUND -->
-<section id="ops-background">
-  <div class="section-header">
-    <span class="section-num">03 //</span>
-    <h2 class="section-title">Operations & Admin Background</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="skills-categories">
-    <div class="skill-group">
-      <div class="skill-group-title">// accounts receivable</div>
-      <div class="skill-list">
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent3)"></span>4 years experience</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent3)"></span>Invoicing & payment tracking</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent3)"></span>Outstanding accounts follow-up</div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">// research & data</div>
-      <div class="skill-list">
-        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Amazon VA — research support</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Data management & entry</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--amber)"></span>Information organization</div>
-      </div>
-    </div>
-    <div class="skill-group">
-      <div class="skill-group-title">// bookkeeping</div>
-      <div class="skill-list">
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent2)"></span>Transaction tracking</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent2)"></span>Financial record-keeping</div>
-        <div class="skill-item"><span class="skill-dot" style="background:var(--accent2)"></span>Basic bookkeeping practices</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="section-header">
-    <span class="section-num">04 //</span>
-    <h2 class="section-title">About</h2>
-    <div class="section-line"></div>
-  </div>
-
-  <div class="about-grid">
-    <div class="about-text">
-   <p>
-      I'm <strong>Michelle</strong>, a detail-oriented Virtual Assistant with experience in administrative support and workflow automation.
-    </p>
-    <p>
-      I'm skilled in <strong>Google Workspace, Zapier, Looker Studio, and Apps Script</strong>, and I enjoy creating organized systems and helping teams work more efficiently.
-    </p>
-    <p>
-      Beyond automation, I bring hands-on experience in <strong>accounts receivable, client reporting, and data management</strong> — combining administrative reliability with technical problem-solving.
-    </p>
-    <p><strong>What I can build for you:</strong></p>
-    <ul style="color: var(--muted); line-height: 1.8; padding-left: 1.25rem; margin-bottom: 1rem;">
-      <li>Google Apps Script automation</li>
-      <li>Zapier multi-step workflows & integrations</li>
-      <li>Google Sheets &amp; Forms workflows</li>
-      <li>Gmail, Docs, and Drive automation</li>
-      <li>API integrations and webhooks</li>
-      <li>Airtable databases & lead management systems</li>
-      <li>Data cleaning and organization</li>
-      <li>Automated reporting dashboards</li>
-      <li>Looker Studio dashboards</li>
-      <li>AI-assisted workflows using ChatGPT API</li>
-      <li>Client reporting & multi-account tracking systems</li>
-      <li>Invoice & payment tracking / accounts receivable support</li>
-      <li>Research & data organization</li>
-    </ul>
-</div>
-        <div class="about-meta">
-      <div class="meta-item">
-        <span class="meta-icon">📍</span>
-        <div>
-          <div class="meta-label">LOCATION</div>
-          <div class="meta-value">Philippines · Remote-ready</div>
-        </div>
-      </div>
-      <div class="meta-item">
-        <span class="meta-icon">💼</span>
-        <div>
-          <div class="meta-label">AVAILABILITY</div>
-          <div class="meta-value">Open to freelance & full-time</div>
-        </div>
-      </div>
-      <div class="meta-item">
-        <span class="meta-icon">🎯</span>
-        <div>
-          <div class="meta-label">SPECIALIZATION</div>
-          <div class="meta-value">Google Workspace · APIs · Reporting</div>
-        </div>
-      </div>
-      <div class="meta-item">
-        <span class="meta-icon">📡</span>
-        <div>
-          <div class="meta-label">PLATFORMS</div>
-          <div class="meta-value">OnlineJobs.ph · Upwork</div>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">View Featured Work →</a>
+          <a class="btn btn-secondary" href="mailto:sanchezmitch77@gmail.com">Work With Me →</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </header>
 
-<!-- CONTACT -->
-<section id="contact">
-  <div class="section-header">
-    <span class="section-num">05 //</span>
-    <h2 class="section-title">Get in Touch</h2>
-    <div class="section-line"></div>
-  </div>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="section-label">01 / About</div>
+      <h2 class="section-title">Built around the business problem.</h2>
 
-  <div class="contact-inner">
-    <h2>Let's build something automated.</h2>
-    <p>Available for freelance projects, VA roles, and automation consulting. Based in the Philippines — remote-ready worldwide.</p>
-    <div class="contact-links">
-      <a href="mailto:sanchezmitch77@gmail.com" class="btn btn-accent">email me →</a>
-      <a href="https://mitchsanchez29.github.io/automation-portfolio/" class="btn btn-ghost" target="_blank">Portfolio ↗</a>
-      <a href="https://github.com/mitchsanchez29" class="btn btn-ghost" target="_blank">GitHub ↗</a>
-      <a href="https://v2.onlinejobs.ph/jobseekers/info/1257742" class="btn btn-ghost" target="_blank">OnlineJobs.ph ↗</a>
+      <div class="about-grid">
+        <div class="about-copy">
+          <p>
+            Strong systems start with understanding how the work actually moves.
+            The focus is on finding where information gets stuck, where manual
+            work creates unnecessary effort, and where reporting becomes difficult
+            to trust.
+          </p>
+
+          <p>
+            Experience across marketing agencies, high-ticket sales operations, real estate, finance, e-commerce, research, reporting, and automation brings together the revenue, operational, and technical sides of a business.
+          </p>
+        </div>
+
+        <div class="process">
+          <div class="process-item">
+            <strong>Understand</strong>
+            <small>Map the process and identify the real bottleneck.</small>
+          </div>
+          <div class="process-item">
+            <strong>Organize</strong>
+            <small>Create a reliable structure and source of truth.</small>
+          </div>
+          <div class="process-item">
+            <strong>Improve</strong>
+            <small>Remove unnecessary steps and friction.</small>
+          </div>
+          <div class="process-item">
+            <strong>Automate</strong>
+            <small>Reduce repetitive work where automation makes sense.</small>
+          </div>
+          <div class="process-item">
+            <strong>Measure</strong>
+            <small>Make the output visible through useful reporting.</small>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="container">
+      <div class="section-label">02 / What Gets Delivered</div>
+      <h2 class="section-title">Services built around the output.</h2>
+
+      <p class="section-intro">
+        The tools are only part of the work. The focus is on what the business
+        can actually use when the project is finished.
+      </p>
+
+      <div class="services">
+
+        <article class="service">
+          <h3>Workflow Automation</h3>
+          <p>
+            Connected workflows that reduce repetitive manual steps and move
+            information between systems more efficiently.
+          </p>
+          <div class="output">Output → Working, repeatable workflow</div>
+        </article>
+
+        <article class="service">
+          <h3>Reporting & Dashboards</h3>
+          <p>
+            Structured reporting systems that turn raw business data into
+            clear operational and performance visibility.
+          </p>
+          <div class="output">Output → Reliable reporting layer</div>
+        </article>
+
+        <article class="service">
+          <h3>Finance & Operations</h3>
+          <p>
+            Organized trackers, payment workflows, AR monitoring, and
+            operational reporting that make financial processes easier to manage.
+          </p>
+          <div class="output">Output → Centralized operational visibility</div>
+        </article>
+
+        <article class="service">
+          <h3>AI-Assisted Operations</h3>
+          <p>
+            AI-supported workflows for research, documentation, data processing,
+            and repetitive operational tasks.
+          </p>
+          <div class="output">Output → Faster, more structured execution</div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PROJECTS -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">03 / Featured Projects</div>
+      <h2 class="section-title">Selected work. Practical solutions.</h2>
+
+      <p class="section-intro">
+        Three projects that show how automation, reporting, and finance
+        operations can work together to create usable business systems.
+      </p>
+
+      <div class="projects">
+
+        <article class="project">
+          <div class="project-number">01 / BUSINESS AUTOMATION</div>
+          <h3>Lead Operations Management System</h3>
+
+          <div class="label">Problem</div>
+          <p>
+            A 8-stage lead coordination process depended on multiple
+            spreadsheets and manual updates, making progress difficult to monitor.
+          </p>
+
+          <div class="label">Output</div>
+          <p>
+            Centralized workflow with lead intake, approval, unique IDs,
+            Drive folders, coordinator workspace, stage progression,
+            master tracking, and live dashboard.
+          </p>
+
+          <div class="label">Result</div>
+          <p class="result">
+            A standardized workflow with one source of truth and real-time
+            operational visibility.
+          </p>
+
+          <a class="project-link"
+             href="https://github.com/mitchsanchez29/business-automation"
+             target="_blank" rel="noopener">
+            View project →
+          </a>
+        </article>
+
+        <article class="project">
+          <div class="project-number">02 / REPORTING</div>
+          <h3>Client Reporting Management System</h3>
+
+          <div class="label">Problem</div>
+          <p>
+            Weekly client reporting was tracked manually, making it easy to
+            miss reports and lose visibility into reporting history.
+          </p>
+
+          <div class="label">Output</div>
+          <p>
+            Client overview, weekly report queue, status tracking, automated
+            report logs, reporting history, and analytics dashboard.
+          </p>
+
+          <div class="label">Result</div>
+          <p class="result">
+            A repeatable reporting process with a clear audit trail and
+            less manual tracking.
+          </p>
+
+          <a class="project-link"
+             href="https://github.com/mitchsanchez29/reporting-analytics"
+             target="_blank" rel="noopener">
+            View project →
+          </a>
+        </article>
+
+        <article class="project">
+          <div class="project-number">03 / FINANCE OPERATIONS</div>
+          <h3>Upcoming & Delayed Payments Tracker</h3>
+
+          <div class="label">Problem</div>
+          <p>
+            Payment data across spreadsheets required manual checking to
+            identify upcoming and overdue accounts.
+          </p>
+
+          <div class="label">Output</div>
+          <p>
+            Automated aging logic, upcoming and delayed trackers, overdue
+            alerts, and management dashboards.
+          </p>
+
+          <div class="label">Result</div>
+          <p class="result">
+            Better cash-flow visibility and faster follow-up without manually
+            cross-checking spreadsheets.
+          </p>
+
+          <a class="project-link"
+             href="https://github.com/mitchsanchez29/finance-operations"
+             target="_blank" rel="noopener">
+            View project →
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CLIENT FEEDBACK -->
+  <section id="feedback">
+    <div class="container">
+      <div class="section-label">04 / Client Feedback</div>
+      <h2 class="section-title">What clients say.</h2>
+      <p class="section-intro">
+        Real feedback from clients across different projects and platforms.
+      </p>
+
+      <div class="feedback-grid">
+Upwork Client
+“Great work! Will be having Michelle do more work for us when we can.”
+
+Upwork Client
+5.0 — Data Extraction / eBay Information Collection/Data Entry
+
+OLJ Client
+“We had a great experience working with Michelle. She performed her tasks efficiently and promptly and were very happy with her performance.”
+
+OLJ Client
+“We’re thankful for employees like you that are putting in the hard work to move our company forward.”
+     
+      </div>
+    </div>
+  </section>
+
+  <!-- FULL PORTFOLIO -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="full-portfolio">
+        <div class="section-label">06 / Full Portfolio</div>
+
+        <h2>See the work behind the results.</h2>
+
+        <p>
+          Explore the full collection of automation, reporting, analytics,
+          and finance operations projects, including workflows, documentation,
+          screenshots, and implementation details.
+        </p>
+
+        <a class="btn btn-primary"
+           href="https://github.com/mitchsanchez29"
+           target="_blank" rel="noopener">
+          View Full Portfolio on GitHub →
+        </a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
 <footer>
- <p>// michelle · virtual assistant & automation specialist</p>
-  <p>// built with HTML · CSS · hosted on GitHub Pages</p>
+  MICHELLE SANCHEZ · AUTOMATION, REPORTING & OPERATIONS
+
+  <div class="footer-links">
+    <a href="https://github.com/mitchsanchez29" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://www.linkedin.com/in/michelle29/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="mailto:sanchezmitch77@gmail.com">Email</a>
+  </div>
 </footer>
 
 </body>
