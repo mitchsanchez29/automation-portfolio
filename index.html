@@ -221,25 +221,31 @@ section{
   color:var(--muted);
   margin:0 auto 42px;
 }
-
+  
+#projects .section-intro{
+  text-align:left;
+  margin-left:0;
+  margin-right:0;
+}
 
 /* =========================
    SERVICES
 ========================= */
 
+
 #services{
-  text-align:center;
+  text-align:left;
 }
 
 #services .section-label{
-  text-align:center;
+  text-align:left;
 }
 
 #services .section-title{
   max-width:760px;
-  margin-left:auto;
-  margin-right:auto;
-  text-align:center;
+  margin-left:0;
+  margin-right:0;
+  text-align:left;
 }
 
 .services{
@@ -317,12 +323,12 @@ section{
 ========================= */
 
 #tools{
-  text-align:center;
+  text-align:left;
 }
 
 #tools .section-label,
 #tools .section-title{
-  text-align:center;
+  text-align:left;
 }
 
 .tools-grid{
@@ -331,7 +337,7 @@ section{
 
   display:flex;
   flex-wrap:wrap;
-  justify-content:center;
+  justify-content:flex-start;
   align-items:center;
   gap:10px;
 }
@@ -431,12 +437,12 @@ section{
 ========================= */
 
 #feedback{
-  text-align:center;
+  text-align:left;
 }
 
 #feedback .section-label,
 #feedback .section-title{
-  text-align:center;
+  text-align:left;
 }
 
 .feedback-grid{
