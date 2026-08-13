@@ -346,9 +346,9 @@ footer{
     <div class="container">
       <div class="section-label">01 / Services</div>
       <h2 class="section-title">Work that fits day to day business needs.</h2>
-
       
     <div class="services">
+    
   <article class="service">
     <h3>Administrative Support</h3>
 
