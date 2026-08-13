@@ -321,12 +321,12 @@ footer{
   <header class="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="eyebrow">Automation &amp; Reporting Specialist &middot; AI Administrative VA</div>
+        <div class="eyebrow">Automation &amp; Operation Support &middot; AI Administrative VA</div>
 
-<h1>
-  Less Manual Work.<br>
-  Better Organized Business.<br>
-  <span>Clearer Results.</span>
+  <h1>
+  Save Time.<br>
+  Stay Organized.<br>
+  <span>Keep Work Moving.</span>
 </h1>
        
     <p class="hero-sub">
@@ -347,41 +347,67 @@ footer{
       <div class="section-label">01 / Services</div>
       <h2 class="section-title">Work that fits day to day business needs.</h2>
 
-      <p class="section-intro">
-  Practical support for the tasks, reporting, and workflows that keep your
-  business running day to day.
-</p>
-
+      
       <div class="services">
 
-        <article class="service">
-          <h3>Administrative Support</h3>
-          <div class="service-label">Problem</div>
-          <p>Inbox, documents, and day to day tasks pile up without dedicated support.</p>
-          <div class="output">Output → Organized inbox, documents, and records, kept current</div>
-        </article>
+        <div class="services">
 
-        <article class="service">
-          <h3>Reporting &amp; Dashboards</h3>
-          <div class="service-label">Problem</div>
-          <p>Reports get rebuilt manually each time, and the numbers are hard to trust.</p>
-          <div class="output">Output → Dashboards and reports that stay accurate and ready to check</div>
-        </article>
+  <article class="service">
+    <h3>Administrative Support</h3>
 
-        <article class="service">
-          <h3>Finance &amp; Lead Support</h3>
-          <div class="service-label">Problem</div>
-          <p>Payment tracking and lead follow up fall behind without dedicated support.</p>
-          <div class="output">Output → Accounts receivable tracking and lead records kept current</div>
-        </article>
+    <div class="service-label">Support</div>
+    <p>
+      Inbox organization, research, outreach, documents, and day-to-day admin tasks.
+    </p>
 
-        <article class="service">
-          <h3>Workflow Support</h3>
-          <div class="service-label">Problem</div>
-          <p>Repetitive manual steps, approvals, and multi-stage processes take up time that could go toward higher value work.</p>
-          <div class="output">Output → Workflows built with Google Apps Script that move data, trigger updates, and cut out manual steps</div>
-        </article>
+    <div class="output">
+      Client Value → More time for higher-priority work
+    </div>
+  </article>
 
+
+  <article class="service">
+    <h3>Reporting &amp; Dashboards</h3>
+
+    <div class="service-label">Support</div>
+    <p>
+      Reporting, data organization, dashboards, and performance tracking.
+    </p>
+
+    <div class="output">
+      Client Value → Clearer visibility for better decisions
+    </div>
+  </article>
+
+
+  <article class="service">
+    <h3>Finance Support</h3>
+
+    <div class="service-label">Support</div>
+    <p>
+      Payment tracking, accounts receivable support, and financial reporting.
+    </p>
+
+    <div class="output">
+      Client Value → Better control over payments and follow-ups
+    </div>
+  </article>
+
+
+  <article class="service">
+    <h3>Workflow Automation</h3>
+
+    <div class="service-label">Support</div>
+    <p>
+      Repetitive tasks, data movement, notifications, and workflow improvements.
+    </p>
+
+    <div class="output">
+      Client Value → Less repetitive work and smoother processes
+    </div>
+  </article>
+
+</div>
       </div>
     </div>
   </section>
@@ -565,7 +591,7 @@ footer{
 </main>
 
 <footer>
-  MICHELLE SANCHEZ · AI ADMINISTRATIVE VA · REPORTING &amp; WORKFLOW AUTOMATION SUPPORT
+  MICHELLE SANCHEZ · AI ADMINISTRATIVE VA · OPERATION &amp; WORKFLOW AUTOMATION SUPPORT
 
   <div class="footer-links">
     <a href="https://github.com/mitchsanchez29" target="_blank" rel="noopener">GitHub</a>
