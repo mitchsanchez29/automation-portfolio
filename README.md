@@ -629,7 +629,7 @@ footer{
       <div class="full-portfolio">
         <div class="section-label">06 / Full Portfolio</div>
 
-        <h2>This is the highlight reel. There's more built the same way.</h2>
+        <h2>This is just a preview. More Work Here.</h2>
 
         <p>
           Every project in the full portfolio follows the same standard: the
