@@ -436,7 +436,7 @@ footer{
 
         <article class="project">
           <div class="project-number">01 / WORKFLOW SUPPORT</div>
-          <h3>Lead Tracking &amp; Coordination System</h3>
+          <h3>Lead Operations &amp; Management System</h3> 
 
           <div class="label">Problem</div>
           <p>
