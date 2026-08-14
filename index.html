@@ -198,6 +198,9 @@ section{padding:92px 0;border-bottom:1px solid var(--border);scroll-margin-top:7
   background:var(--surface);
   border:1px solid var(--border);
   border-radius:8px;
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 .service h3{font-size:18px;margin-bottom:9px}
 .service p{color:var(--muted);font-size:14px}
@@ -210,7 +213,7 @@ section{padding:92px 0;border-bottom:1px solid var(--border);scroll-margin-top:7
   margin-bottom:3px;
 }
 .output{
-  margin-top:20px;
+  margin-top:auto;
   padding-top:15px;
   border-top:1px solid var(--border);
   color:var(--accent);
@@ -337,11 +340,11 @@ footer{
       <span class="logo">MICHELLE / PORTFOLIO</span>
     </a>
     <ul>
-      <li><a href="#how">How It Works</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#tools">Tools</a></li>
       <li><a href="#projects">Work</a></li>
       <li><a href="#feedback">Feedback</a></li>
+      <li><a href="#tools">Tools</a></li>
+      <li><a href="#how">How It Works</a></li>
     </ul>
     <a class="nav-contact" href="mailto:sanchezmitch77@gmail.com">Contact</a>
   </div>
@@ -353,7 +356,7 @@ footer{
   <header class="hero">
     <div class="container">
       <div class="hero-content">
-        <div class="eyebrow">Automation &amp; Operations Support &middot; AI Administrative VA</div>
+        <div class="eyebrow">Operations Support &middot; Reporting &middot; Automation &middot; AI-Assisted Work</div>
 
         <h1>
           Not Just Extra Hands.<br>
@@ -361,20 +364,10 @@ footer{
         </h1>
 
         <div class="experience-line">6 years of freelance support work: administrative, reporting, and workflow automation.</div>
-        <div class="experience-line">Based in the Philippines (GMT+8)</div>
 
         <p class="hero-sub">
-          Administrative support, reporting, and workflow automation for growing businesses.
+          Less scattered work. Clearer data. Smoother processes. Smarter support with automation and AI.
         </p>
-
-        <div class="tags">
-          <span class="tag">Small Businesses</span>
-          <span class="tag">Marketing Agencies</span>
-          <span class="tag">Finance Teams</span>
-          <span class="tag">Real Estate</span>
-          <span class="tag">High-Ticket Sales</span>
-          <span class="tag">Amazon / E-commerce</span>
-        </div>
 
         <div class="actions">
           <a class="btn btn-primary" href="#projects">See The Work →</a>
@@ -384,36 +377,10 @@ footer{
     </div>
   </header>
 
-  <!-- HOW IT WORKS -->
-  <section id="how">
-    <div class="container">
-      <div class="section-label">01 / How It Works</div>
-      <h2 class="section-title">Simple to start. Clear from the beginning.</h2>
-
-      <div class="how-grid">
-        <div class="how-step">
-          <div class="how-number">STEP 1</div>
-          <h3>Send a Message</h3>
-          <p>Describe the problem or the task that needs support.</p>
-        </div>
-        <div class="how-step">
-          <div class="how-number">STEP 2</div>
-          <h3>Get a Response</h3>
-          <p>A reply within 24 hours (Philippines, GMT+8) with a quick assessment.</p>
-        </div>
-        <div class="how-step">
-          <div class="how-number">STEP 3</div>
-          <h3>See the Scope</h3>
-          <p>Scope and timeline shared before any work starts.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- SERVICES -->
   <section id="services">
     <div class="container">
-      <div class="section-label">02 / What Gets Covered</div>
+      <div class="section-label">01 / What Gets Covered</div>
       <h2 class="section-title">Work that fits day to day business needs.</h2>
 
       <p class="section-intro">
@@ -454,30 +421,10 @@ footer{
       </div>
     </div>
   </section>
-
-  <!-- TOOLS -->
-  <section id="tools">
-    <div class="container">
-      <div class="section-label">03 / Tools</div>
-      <h2 class="section-title">The tools behind the work.</h2>
-
-      <div class="tools-grid">
-        <span class="tool-chip">Google Workspace</span>
-        <span class="tool-chip">Google Sheets</span>
-        <span class="tool-chip">Google Apps Script</span>
-        <span class="tool-chip">Zapier</span>
-        <span class="tool-chip">Airtable</span>
-        <span class="tool-chip">Looker Studio</span>
-        <span class="tool-chip">APIs &amp; Integrations</span>
-        <span class="tool-chip">AI-Assisted Workflows (Claude &amp; ChatGPT)</span>
-      </div>
-    </div>
-  </section>
-
   <!-- FEATURED PROJECTS -->
   <section id="projects">
     <div class="container">
-      <div class="section-label">04 / Featured Projects</div>
+      <div class="section-label">02 / Featured Projects</div>
       <h2 class="section-title">Selected work. Practical solutions.</h2>
 
       <p class="section-intro">
@@ -510,6 +457,13 @@ footer{
             operational visibility.
           </p>
 
+          <div class="label">AI-Assisted</div>
+          <p>
+            Claude assisted with the workflow logic and Apps Script
+            development, including troubleshooting and refinement, then
+            helped turn the finished system into an SOP and client playbook.
+          </p>
+
           <a class="project-link"
              href="https://github.com/mitchsanchez29/business-automation"
              target="_blank" rel="noopener">
@@ -537,6 +491,13 @@ footer{
           <p class="result">
             A repeatable reporting process with a clear audit trail and
             less manual tracking.
+          </p>
+
+          <div class="label">AI-Assisted</div>
+          <p>
+            The reporting workflow and requirements were mapped out first.
+            Claude then helped build the reporting sheet, with Apps Script
+            handling the integration, troubleshooting, and refinement.
           </p>
 
           <a class="project-link"
@@ -568,6 +529,13 @@ footer{
             cross-checking spreadsheets.
           </p>
 
+          <div class="label">AI-Assisted</div>
+          <p>
+            Claude assisted with the Apps Script development behind the
+            tracker, including troubleshooting and refinement of the
+            payment tracking workflow.
+          </p>
+
           <a class="project-link"
              href="https://github.com/mitchsanchez29/finance-operations"
              target="_blank" rel="noopener">
@@ -578,11 +546,10 @@ footer{
       </div>
     </div>
   </section>
-
   <!-- CLIENT FEEDBACK -->
   <section id="feedback">
     <div class="container">
-      <div class="section-label">05 / Client Feedback</div>
+      <div class="section-label">03 / Client Feedback</div>
       <h2 class="section-title">What clients say.</h2>
       <p class="section-intro">
         Real feedback from clients across different projects and platforms.
@@ -594,7 +561,7 @@ footer{
           <div class="feedback-meta">UPWORK CLIENT</div>
         </div>
         <div class="feedback-card">
-          <p class="feedback-quote-text">5.0 rating — Data Extraction / eBay Information Collection &amp; Data Entry</p>
+          <p class="feedback-quote-text">5.0 rating — E-commerce Research &amp; Data Organization (eBay)</p>
           <div class="feedback-meta">UPWORK CLIENT</div>
         </div>
         <div class="feedback-card">
@@ -605,6 +572,53 @@ footer{
           <p class="feedback-quote-text">"We're thankful for employees like you that are putting in the hard work to move our company forward."</p>
           <div class="feedback-meta">OLJ CLIENT</div>
         </div>
+      </div>
+    </div>
+  </section>
+  <!-- TOOLS -->
+  <section id="tools">
+    <div class="container">
+      <div class="section-label">04 / Tools</div>
+      <h2 class="section-title">The tools behind the work.</h2>
+
+      <div class="tools-grid">
+        <span class="tool-chip">Google Workspace</span>
+        <span class="tool-chip">Google Sheets</span>
+        <span class="tool-chip">Google Apps Script</span>
+        <span class="tool-chip">Zapier</span>
+        <span class="tool-chip">Airtable</span>
+        <span class="tool-chip">Looker Studio</span>
+        <span class="tool-chip">APIs &amp; Integrations</span>
+        <span class="tool-chip">AI-Assisted Workflows (Claude &amp; ChatGPT)</span>
+      </div>
+    </div>
+  </section>
+  <!-- HOW IT WORKS -->
+  <section id="how">
+    <div class="container">
+      <div class="section-label">05 / How It Works</div>
+      <h2 class="section-title">Business Work, Handled.</h2>
+
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="how-number">STEP 1</div>
+          <h3>Send a Message</h3>
+          <p>Describe the problem or the task that needs support.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-number">STEP 2</div>
+          <h3>Get a Response</h3>
+          <p>A reply within 24 hours (Philippines, GMT+8) with a quick assessment.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-number">STEP 3</div>
+          <h3>See the Scope</h3>
+          <p>Scope and timeline shared before any work starts, so there's nothing to guess.</p>
+        </div>
+      </div>
+
+      <div class="actions" style="margin-top:32px">
+        <a class="btn btn-primary" href="mailto:sanchezmitch77@gmail.com">Send The First Message →</a>
       </div>
     </div>
   </section>
@@ -635,7 +649,9 @@ footer{
 </main>
 
 <footer>
-  MICHELLE SANCHEZ · AI ADMINISTRATIVE VA · OPERATIONS &amp; WORKFLOW AUTOMATION SUPPORT
+  &ldquo;Give thanks in all circumstances.&rdquo; &mdash; 1 Thess. 5:18
+  <br><br>
+  MICHELLE SANCHEZ
 
   <div class="footer-links">
     <a href="https://github.com/mitchsanchez29" target="_blank" rel="noopener">GitHub</a>
